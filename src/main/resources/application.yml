@@ -1,0 +1,19 @@
+spring:
+ kafka:
+  consumer:
+   auto-offset-reset: latest
+  bootstrapAddress: 29092
+  consumerGroup: customergroup
+ datasource:
+  url: jdbc:mysql://localhost:3306/customerdb
+  username: root
+  password: root
+ jpa:
+  properties:
+   hibernate:
+    dialect: org.hibernate.dialect.MySQLDialect
+    ddl-auto: update  
+server:
+ port: 8082
+ servlet:
+  contextPath: /customerdatasystem/api/v1.0.0

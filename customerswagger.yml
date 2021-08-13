@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: Customer master datasystem
+  description: API to retrive customer information by firstname and last name
+  version: 1.0.0
+
+tags:
+- name: Customer
+  description: API to retrive customer information by firstname and last name
+servers:
+- url: http://localhost:8082/customerdatasystem/api/v1.0.0
+
+paths:
+  '/customers/getByFirstName/{firstName}':
+    get:
+      summary: Retrieves all customers by using firstName
+      description: Customer details stored via events can retrive by firstName ignore case sensitive
+      operationId: GetByFirstName
+      parameters:
+        - name: firstName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Retrieved the customers successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerList'
+  '/customers/getByLastName/{lastName}':
+    get:
+      summary: Retrieves all customers by using firstName
+      description: Customer details stored via events can retrive by firstName ignore case sensitive
+      operationId: GetByLastName
+      parameters:
+        - name: lastName
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Retrieved the customers successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerList'              
+
+components:
+  schemas:
+    Customer:
+      properties:
+        id:
+          type: string
+          description: Indicates the Unique id of event.
+        firstName:
+          type: string
+          description: Indicates the type of event.
+        lastName:
+          type: string
+          description: Indicates the additional event meta data.
+    CustomerList:
+      type: array
+      description: Indicates the List of events
+      items:
+       $ref: '#/components/schemas/Customer'
