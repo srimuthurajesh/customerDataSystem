@@ -4,7 +4,7 @@ This app will consumes customer data from kafka event and do the insertion, then
 
 ### Prerequites softwares
 Java 8
-Docker
+& Docker 
 
 
 ### Steps to Start the project
