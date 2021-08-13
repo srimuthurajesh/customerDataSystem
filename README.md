@@ -18,5 +18,5 @@ Java 8
     1. http://localhost:8082/customerdatasystem/api/v1.0.0/customers/getByFirstName/Alex
     2. http://localhost:8082/customerdatasystem/api/v1.0.0/customers/getByLastName/mac  
 
-Refer swagger[swagger](https://github.com/srimuthurajesh/customerDataSystem/blob/main/customerswagger.yml) for Api details
+Refer this [swagger](https://github.com/srimuthurajesh/customerDataSystem/blob/main/customerswagger.yml) for Api details
 
