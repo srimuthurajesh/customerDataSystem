@@ -2,7 +2,7 @@ spring:
  kafka:
   consumer:
    auto-offset-reset: latest
-  bootstrapAddress: 29092
+  bootstrapAddress: kafka:29092
   consumerGroup: customergroup
  datasource:
   url: jdbc:mysql://localhost:3306/customerdb
